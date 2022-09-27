@@ -13,6 +13,9 @@
       rel="stylesheet"
       href=" https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" 
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
@@ -72,7 +75,7 @@
             Ефективні рішення для<br />
             вашого бізнесу
           </h1>
-          <button class="button" type="button">Замовити послугу</button>
+          <button class="button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -80,7 +83,7 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="section-title title-hidden">Наші переваги</h2>
+          <h2 class="visually-hidden">Наші переваги</h2>
           <ul class="list-sec">
             <li class="item-sec">
               <div class="icon">
@@ -134,6 +137,8 @@
         </div>
       </section>
 
+
+
       <!--Our work-->
 
       <section class="section-work">
@@ -141,15 +146,24 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="list">
             <li class="work-card">
-              <img src="./images/box1.jpg" alt="Візуалізація" />
+              <div class="label">
+                <img src="./images/box1.jpg" alt="Візуалізація" />
+                <p class="label-text">Десктопні додатки</p>
+              </div>              
             </li>
 
             <li class="work-card">
-              <img src="./images/box2.jpg" alt="Мобільність" />
+              <div class="label">
+                <img src="./images/box2.jpg" alt="Мобільність" />
+                <p class="label-text">Мобільні додатки</p>
+              </div>              
             </li>
 
             <li class="work-card">
-              <img src="./images/box3.jpg" alt="Дизайн" />
+              <div class="label">
+                <img src="./images/box3.jpg" alt="Дизайн" />
+                <p class="label-text">Дизайнерські рішення</p>
+              </div>              
             </li>
           </ul>
         </div>
@@ -325,34 +339,34 @@
 
       <!--Постійні клієнти-->
 
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Постійні клієнти</h2>
-          <ul class="client-list">
-            <li class="client-card">
-              <a href="" target="_blank" rel="noopener noreferrer nofollow"class="client-link">
-                <svg class="client-icon">
-                  <use href="./images/icons.svg/sprite.svg#icon-client1"></use>
-                </svg>
-              </a>              
-            </li>
-
-            <li class="client-card">
-              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
-                <svg class="client-icon">
-                  <use href="./images/icons.svg/sprite.svg#icon-client2"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="client-card">
-              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
-                <svg class="client-icon">
-                  <use href="./images/icons.svg/sprite.svg#icon-client3"></use>
-                </svg>
-              </a>
-            </li>
-
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Постійні клієнти</h2>
+        <ul class="client-list">
+          <li class="client-card">
+            <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
+              <svg class="client-icon">
+                <use href="./images/icons.svg/sprite.svg#icon-client1"></use>
+              </svg>
+            </a>
+          </li>
+    
+          <li class="client-card">
+            <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
+              <svg class="client-icon">
+                <use href="./images/icons.svg/sprite.svg#icon-client2"></use>
+              </svg>
+            </a>
+          </li>
+    
+          <li class="client-card">
+            <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
+              <svg class="client-icon">
+                <use href="./images/icons.svg/sprite.svg#icon-client3"></use>
+              </svg>
+            </a>
+          </li>
+    
           <li class="client-card">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
               <svg class="client-icon">
@@ -360,25 +374,25 @@
               </svg>
             </a>
           </li>
-
-            <li class="client-card">
-              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
-                <svg class="client-icon">
-                  <use href="./images/icons.svg/sprite.svg#icon-client5"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="client-card">
-              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
-                <svg class="client-icon">
-                  <use href="./images/icons.svg/sprite.svg#icon-client6"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+    
+          <li class="client-card">
+            <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
+              <svg class="client-icon">
+                <use href="./images/icons.svg/sprite.svg#icon-client5"></use>
+              </svg>
+            </a>
+          </li>
+    
+          <li class="client-card">
+            <a href="" target="_blank" rel="noopener noreferrer nofollow" class="client-link">
+              <svg class="client-icon">
+                <use href="./images/icons.svg/sprite.svg#icon-client6"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
     </main>
 
     <!--footer-->
@@ -451,5 +465,12 @@
 
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-button" data-modal-close>X</button>
+      </div>
+      
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
