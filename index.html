@@ -146,21 +146,21 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="list">
             <li class="work-card">
-              <div class="label">
+              <div class="label-card">
                 <img src="./images/box1.jpg" alt="Візуалізація" />
                 <p class="label-text">Десктопні додатки</p>
               </div>              
             </li>
 
             <li class="work-card">
-              <div class="label">
+              <div class="label-card">
                 <img src="./images/box2.jpg" alt="Мобільність" />
                 <p class="label-text">Мобільні додатки</p>
               </div>              
             </li>
 
             <li class="work-card">
-              <div class="label">
+              <div class="label-card">
                 <img src="./images/box3.jpg" alt="Дизайн" />
                 <p class="label-text">Дизайнерські рішення</p>
               </div>              
@@ -212,8 +212,8 @@
                     </a>
                   </li>
                 </ul>
-                </div>
-                </li>
+              </div>
+            </li>
 
             <li class="team-card">
               <img src="./images/olgarepina.jpg" alt="Ольга Рєпіна" width="270" />
@@ -290,8 +290,8 @@
                     </a>
                   </li>
                 </ul>
-                </div>
-                </li>
+              </div>
+            </li>
 
             <li class="team-card">
               <img src="./images/mikhailoermakov.jpg" alt="Михайло Єрмаков" width="270" />
@@ -329,8 +329,7 @@
                     </a>
                   </li>
                 </ul>
-                </div>
-                </li>
+                
               </div>
             </li>
           </ul>
@@ -463,8 +462,24 @@
           </ul>
         </div>
 
+        <div class="form-mail">
+          <h2 class="title-net">Підпишіться на розсилку</h2>
+          <div class="footer-button">
+            <input type="email" id="mail" name="mail" placeholder="E-mail"/>
+            <button name="mail" type="submit" class="f-btn">Підписатися</button>
+            <svg class="icon-send">
+              <use href="./images/icons.svg/sprite2.svg#icon-icon-send"></use>
+            </svg>
+          </div> 
+        </div>   
+                           
+       
+
       </div>
     </footer>
+
+    <!--Modal window-->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-button" data-modal-close>
@@ -472,6 +487,66 @@
             <use href="./images/icons.svg/sprite2.svg#icon-close-button"></use>
           </svg>
         </button>
+        <p class="modal-title">
+          Залиште свої дані, ми вам передзвонимо
+        </p>
+        <form action="" class="modal-form">
+
+          <div class="form-element">
+            <label for="name">
+              Ім'я          
+            </label>
+            <div class="input-wrap">
+              <input type="text" id="name" name="name" required/> 
+              <svg class="clien-icon">
+              <use href="./images/icons.svg/sprite2.svg#icon-Person"></use>
+              </svg>       
+            </div>                         
+          </div>
+
+          <div class="form-element">
+            <label for="tel">
+              Телефон
+            </label>
+            <div class="input-wrap">
+              <input 
+                type="tel" 
+                id="tel" 
+                name="tel"
+                placeholder="0123456789" 
+                pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
+                required/>
+                <svg class="clien-icon">
+                <use href="./images/icons.svg/sprite2.svg#icon-Phone"></use>
+              </svg>              
+            </div>
+          </div>
+          <div class="form-element">
+            <label for="email">
+              Пошта
+            </label>
+            <div class="input-wrap">
+              <input type="email" id="email" name="email" />
+              <svg class="clien-icon">
+                <use href="./images/icons.svg/sprite2.svg#icon-Mail"></use>
+              </svg>              
+            </div> 
+          </div>
+          <div class="form-element">
+            <label for="coment">
+              Коментар
+            </label>
+            <textarea name="coment" id="coment" placeholder="Ведіть текст"></textarea>
+          </div>
+          <div class="check">             
+            <input type="checkbox" name="check" id="check" required/>
+            <label for="check">           
+               Погоджуюся з розсилкою та приймаю <a href="./licens.pdf">Умови договору</a>
+              </label>
+          </div>
+          
+         <button type="submit" class="btn">Відправити</button>
+        </form>
       </div>
       
     </div>
